@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -26,57 +28,62 @@ body {
     gap: 10px;
 }
 
+.item {
+    min-width: 670px;
+    cursor: pointer;
+    padding: 10px 15px;
+}
+
 .item-1 {
     background: #fcf5c78a;
-    padding: 10px 15px;
     border: 4px solid #fcf5c717;
     border-radius: 5px;
-    cursor: pointer;
 }
 
 .item-2 {
     background: #cae9ff81;
-    padding: 10px 15px;
     border: 4px solid #cae9ff17;
     border-radius: 5px;
-    cursor: pointer;
 }
 
 .item-3 {
     background: #ffcad493;
-    padding: 10px 15px;
     border: 4px solid #ffcad42c;
     border-radius: 4px;
-    cursor: pointer;
 }
 
 .item-4 {
     background: #c8b6ff93;
-    padding: 10px 15px;
     border: 4px solid #c8b6ff27;
     border-radius: 4px;
-    cursor: pointer;
 }
 
 .title {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 18px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.title .detail {
+.title::after {
+    content: '+';
     font-size: 24px;
     cursor: pointer;
 }
 
 .answer {
     margin-top: 10px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 15.5px;
+    display: none;
 }
 
-.ativo {
-    display: none;
+.answer.ativo {
+    display: block;
+}
+
+.title.ativo::after {
+    content: '−';
+    font-size: 25px;
 }
